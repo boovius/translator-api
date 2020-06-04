@@ -27,8 +27,8 @@ async function translateText(from, target) {
 
 app.post('/', async (req, res) => {
   console.log(req.body);
-  const { from, target } = req.body;
-  const translations = await translateText(from, target);
+  const { word, target } = req.body;
+  const translations = await translateText(word, target);
   res.json({translations});
 })
 
